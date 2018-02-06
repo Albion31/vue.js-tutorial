@@ -6,7 +6,10 @@
   </head>
   <body>
     <div id="app">
-      <a v-bind:href="blogUrl">Visit Vue Tutorial</a>
+      <p>Title: {{ title }}</p>
+      <p>Released: {{ release }}</p>
+      <p>The movie is {{ release < 2000 ? 'old' : 'new' }}</p>
+      <div v-bind:title="title">Hover your mouse here!</div>
     </div>
 
     <!-- <script src="https://unpkg.com/vue@2.5.13/dist/vue.js"></script> -->
@@ -16,7 +19,9 @@
       new Vue({
         el: '#app',
         data: {
-          blogUrl: 'https://vuejs.org/v2/guide/installation.html'
+          title: "The Matrix",
+          release: 1999,
+          movieUrl: "http://www.imdb.com/title/tt0133093/"
         }
       });
     </script>
