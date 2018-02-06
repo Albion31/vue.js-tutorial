@@ -6,7 +6,7 @@
   </head>
   <body>
     <div id="app">
-      <h1>{{ age > 60 ? 'Old' : 'Young' }}</h1>
+      <h1>{{ name.split(' ')[0] }}</h1>
     </div>
 
     <!-- <script src="https://unpkg.com/vue@2.5.13/dist/vue.js"></script> -->
@@ -15,7 +15,8 @@
       new Vue({
         el: '#app',
         data: {
-          age: 27
+          age: 27,
+          name: 'Lan Pham'
         }
       });
     </script>
