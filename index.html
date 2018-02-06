@@ -6,17 +6,23 @@
   </head>
   <body>
     <div id="app">
-      <h1>{{ name.split(' ')[0] }}</h1>
+      <h1>{{ getFullName() }}</h1>
     </div>
 
     <!-- <script src="https://unpkg.com/vue@2.5.13/dist/vue.js"></script> -->
     <script src="vue.js"></script>
+
     <script type="text/javascript">
       new Vue({
         el: '#app',
         data: {
-          age: 27,
-          name: 'Lan Pham'
+          firstName: 'Lan',
+          lastName: 'Pham'
+        },
+        methods: {
+          getFullName: function() {
+            return this.firstName + ' ' + this.lastName;
+          }
         }
       });
     </script>
