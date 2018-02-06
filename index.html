@@ -6,7 +6,7 @@
   </head>
   <body>
     <div id="app">
-      <h1>{{ getFullName(firstName, lastName).name }}</h1>
+      <a v-bind:href="blogUrl">Visit Vue Tutorial</a>
     </div>
 
     <!-- <script src="https://unpkg.com/vue@2.5.13/dist/vue.js"></script> -->
@@ -16,15 +16,7 @@
       new Vue({
         el: '#app',
         data: {
-          firstName: 'Lan',
-          lastName: 'Pham'
-        },
-        methods: {
-          getFullName: function(first, last) {
-            return {
-              name: first + ' ' + last
-            }
-          }
+          blogUrl: 'https://vuejs.org/v2/guide/installation.html'
         }
       });
     </script>
