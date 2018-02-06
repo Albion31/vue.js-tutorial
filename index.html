@@ -6,10 +6,7 @@
   </head>
   <body>
     <div id="app">
-      <p>Title: {{ title }}</p>
-      <p>Released: {{ release }}</p>
-      <p>The movie is {{ release < 2000 ? 'old' : 'new' }}</p>
-      <div v-bind:title="title">Hover your mouse here!</div>
+      <div v-bind:title="firstName + ' ' + lastName">Hover to see my name</div>
     </div>
 
     <!-- <script src="https://unpkg.com/vue@2.5.13/dist/vue.js"></script> -->
@@ -19,9 +16,8 @@
       new Vue({
         el: '#app',
         data: {
-          title: "The Matrix",
-          release: 1999,
-          movieUrl: "http://www.imdb.com/title/tt0133093/"
+          firstName: "Lan",
+          lastName: "Pham"
         }
       });
     </script>
